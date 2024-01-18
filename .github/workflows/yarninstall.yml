@@ -14,7 +14,7 @@ jobs:
         with:
           submodules: recursive
       - name: yarn build
-        working-directory: ./baserepo
         run: |
+          cd baserepo
           yarn
           yarn build
