@@ -1,0 +1,20 @@
+name: yarn-build
+
+on:
+  push:
+    branches: [ "main" ]
+
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          submodules: recursive
+      - name: yarn build
+        working-directory: ./baserepo
+        run: |
+          yarn
+          yarn build
