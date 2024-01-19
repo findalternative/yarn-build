@@ -14,4 +14,6 @@
     - "cd baserepo"
     - "yarn"
     - "yarn build"
+    setup_commands:
+    - "apt install default-jdk"
     shell: "BASH"
