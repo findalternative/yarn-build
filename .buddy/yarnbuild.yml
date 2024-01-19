@@ -15,5 +15,5 @@
     - "yarn"
     - "yarn build"
     setup_commands:
-    - "apt install default-jdk"
+    - "apt-get install default-jdk"
     shell: "BASH"
