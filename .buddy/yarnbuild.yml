@@ -15,5 +15,7 @@
     - "yarn"
     - "yarn build"
     setup_commands:
-    - "apt-get update && apt-get install -y openjdk-11-jdk"
+    - "which java"
+    - "apt-cache search openjdk"
+    - "apt-get update && apt-get install -y openjdk-17-jdk"
     shell: "BASH"
