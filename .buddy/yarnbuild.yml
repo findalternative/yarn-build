@@ -15,5 +15,5 @@
     - "yarn"
     - "yarn build"
     setup_commands:
-    - "sudo apt-get install openjdk-11-jdk"
+    - "apt-get install openjdk-11-jdk"
     shell: "BASH"
