@@ -7,9 +7,6 @@ jobs:
     docker:
       - image: cimg/openjdk:17.0-node
     steps:
-      - node/install:
-          install-yarn: true
-          node-version: '20.9.0'
       - checkout
       - run: git submodule sync
       - run: git submodule update --init --recursive
