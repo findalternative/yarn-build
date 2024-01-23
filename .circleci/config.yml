@@ -1,0 +1,25 @@
+version: 2.1
+orbs:
+  node: circleci/node@4.7
+
+jobs:
+  yarn-build:
+    docker:
+      - image: cimg/base:stable
+    steps:
+      - node/install:
+          install-yarn: true
+          node-version: '20.9.0'
+      - checkout
+      - run: git submodule sync
+      - run: git submodule update --init --recursive
+      - run:
+          name: "yarn-build"
+          command: |
+            cd baserepo
+            yarn
+            yarn build
+workflows:
+  yarn-build-workflow:
+    jobs:
+      - yarn-build
