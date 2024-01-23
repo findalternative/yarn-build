@@ -5,7 +5,7 @@ orbs:
 jobs:
   yarn-build:
     docker:
-      - image: cimg/base:stable
+      - image: cimg/openjdk:17.0-node
     steps:
       - node/install:
           install-yarn: true
