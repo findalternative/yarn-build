@@ -1,6 +1,5 @@
 steps:
-  - command: cd baserepo
-  - command: yarn && yarn build
+  - command: cd baserepo && yarn && yarn build
     plugins:
       - docker:
           image: "node"
