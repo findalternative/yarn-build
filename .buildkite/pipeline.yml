@@ -1,0 +1,4 @@
+steps:
+  - command: cd baserepo
+  - command: yarn
+  - command: yarn build
