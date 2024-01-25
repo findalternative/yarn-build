@@ -1,0 +1,11 @@
+image: atlassian/default-image:4
+pipelines:
+  default:
+    - step:
+        name: yarn-build
+        script:
+          - git submodule sync
+          - git submodule update --init --recursive
+          - cd baserepo
+          - yarn 
+          - yarn build
