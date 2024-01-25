@@ -6,6 +6,8 @@ pipelines:
         script:
           - git submodule sync
           - git submodule update --init --recursive
+          - npm install --global yarn
+          - sudo apt-get update && apt-get install -y openjdk-17-jdk
           - cd baserepo
           - yarn 
           - yarn build
