@@ -7,5 +7,3 @@ build:
     - apt-get update && apt-get install -y openjdk-17-jdk 
     - yarn
     - yarn build
-  rules:
-    - if: $ENABLE_PIPELINES == "true"
