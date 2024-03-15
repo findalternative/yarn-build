@@ -1,2 +1,2 @@
 steps:
-  - command: cd baserepo && yarn && yarn build
+  - command: . ~/.bashrc && cd baserepo && yarn && yarn build
