@@ -2,6 +2,9 @@ image: atlassian/default-image:4
 pipelines:
   default:
     - step:
+        runs-on:
+          - self.hosted
+          - linux
         name: yarn-build
         script:
           - git submodule sync
